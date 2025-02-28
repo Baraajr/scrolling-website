@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(#200016, #10001f);
+  height: 100vh; /* width of the screen */
+  font-family: system-ui;
+}
+a {
+  text-decoration: none; /* remove underline from link */
+  color: white;
+}
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+}
+header .logo {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+header ul li {
+  margin: 0 30px;
+}
+header ul li a {
+  padding: 6px 15px; /* padding is good for hover effect */
+}
+/* it will affect the home link by default */
+header ul li a:hover,
+.active {
+  background-color: white;
+  color: rgb(31, 19, 58);
+  border-radius: 20px;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.main::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(to top, #200016, transparent);
+}
+.main img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+#moon {
+  mix-blend-mode: screen;
+  transform: translateY(80px);
+}
+.nouvil {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  transform: translatey(-140px);
+}
+.content {
+  color: white;
+  padding: 30px;
+}
+.content h2 {
+  font-size: 30px;
+  margin: 20px;
+}
+.content p {
+  margin: 20px;
+}
